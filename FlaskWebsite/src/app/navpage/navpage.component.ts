@@ -7,16 +7,17 @@ import { map, shareReplay } from 'rxjs/operators';
   selector: 'app-navpage',
   templateUrl: './navpage.component.html',
   styleUrls: ['./navpage.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavpageComponent {
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches),
+      map((result) => result.matches),
       shareReplay()
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  color_scheme = window.matchMedia('(prefers-color-scheme)').media;
 }

@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { ColorSchemeService } from './theme-changer.service';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,9 @@ import { Component, HostBinding } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'FlaskWebsite';
-  private isDark = false;
-
-  @HostBinding('class')
-  get themeMode() {
-    return this.isDark ? 'theme-dark' : 'theme-light';
+  constructor(private colorSchemeService: ColorSchemeService) {
+    // Load Color Scheme
+    this.colorSchemeService.load();
   }
+  title = 'FlaskWebsite';
 }
