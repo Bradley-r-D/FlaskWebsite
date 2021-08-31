@@ -29,10 +29,25 @@ $FlaskWebsite-theme: mat.define-light-theme(
   )
 );
 
+$FlaskWebsite-theme-dark: mat.define-dark-theme(
+  (
+    color: (
+      primary: $FlaskWebsite-primary,
+      accent: $FlaskWebsite-accent,
+      warn: $FlaskWebsite-warn,
+    ),
+  )
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($FlaskWebsite-theme);
+.theme-light {
+  @include mat.all-component-themes($FlaskWebsite-theme);
+}
+.theme-dark {
+  @include mat.all-component-themes($FlaskWebsite-theme-dark);
+}
 
 /* You can add global styles to this file, and also import other style files */
 
