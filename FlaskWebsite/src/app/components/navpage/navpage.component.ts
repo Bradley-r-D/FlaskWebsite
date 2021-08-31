@@ -19,5 +19,5 @@ export class NavpageComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
-  color_scheme = window.matchMedia('(prefers-color-scheme)').media;
+  page_name = 'Welcome to My Website ~ Bradley Doodnath';
 }

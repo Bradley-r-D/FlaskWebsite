@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { ColorSchemeService } from './theme-changer.service';
+import { ColorSchemeService } from './services/theme-changer.service';
 
 @Component({
   selector: 'app-root',
