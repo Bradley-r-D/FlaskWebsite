@@ -2,9 +2,9 @@
   <mat-sidenav
     #drawer
     class="sidenav"
-    fixedInViewport
+    fixedInViewport="false"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'"
     [opened]="(isHandset$ | async) === true"
   >
     <mat-toolbar>More</mat-toolbar>
@@ -17,7 +17,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="secondary">
+    <mat-toolbar color="primary">
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
@@ -25,7 +25,11 @@
         {{ page_name }}
       </span>
     </mat-toolbar>
-    <!-- <app-personal-info></app-personal-info> -->
+    <router-outlet></router-outlet>
+    <footer>Developed using Angular</footer>
+  </mat-sidenav-content>
+  <mat-sidenav-content>
     <!-- Add Content Here -->
+    <!-- <app-personal-info></app-personal-info> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
