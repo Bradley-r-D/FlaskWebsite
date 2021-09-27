@@ -16,6 +16,18 @@
   z-index: 1;
 }
 
+.mat-subBar {
+  position: sticky;
+}
+
+.navBar-text {
+  margin-top: 0px;
+}
+.navbar-link {
+  flex: auto;
+  padding-left: 5%;
+}
+
 footer {
   font-style: italic;
   text-align: center;
