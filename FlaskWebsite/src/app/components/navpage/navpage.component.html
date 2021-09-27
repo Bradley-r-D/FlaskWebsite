@@ -4,8 +4,6 @@
     class="sidenav"
     fixedInViewport="false"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'push' : 'side'"
-    [opened]="(isHandset$ | async) === true"
   >
     <mat-toolbar style="background-color: #03074a">More</mat-toolbar>
     <mat-nav-list>
@@ -17,12 +15,36 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="drawer.toggle()">
+    <mat-toolbar class="main-navBar" color="primary">
+      <button
+        class="menu-button"
+        mat-icon-button
+        *ngIf="drawer.mode === 'over'"
+        (click)="drawer.toggle()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
       <span>
         {{ page_name }}
+      </span>
+    </mat-toolbar>
+    <mat-toolbar
+      class="mat-subBar"
+      style="background-color: #03074a"
+      *ngIf="drawer.mode === 'side'"
+    >
+      <span>
+        <mat-nav-list class="navBar-text">
+          <a
+            class="navbar-link"
+            routerLink="/personal-info"
+            routerLinkActive="active"
+          >
+            Personal Info
+          </a>
+          <a class="navbar-link" href="#">Skills</a>
+          <a class="navbar-link" href="#">Projects</a>
+        </mat-nav-list>
       </span>
     </mat-toolbar>
     <router-outlet></router-outlet>
@@ -30,6 +52,5 @@
   </mat-sidenav-content>
   <mat-sidenav-content>
     <!-- Add Content Here -->
-    <!-- <app-personal-info></app-personal-info> -->
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,8 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-navpage',
@@ -18,10 +19,31 @@ export class NavpageComponent {
       shareReplay()
     );
 
+  @ViewChild(MatSidenav)
+  drawer!: MatSidenav;
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private route: ActivatedRoute
   ) {}
 
   page_name = 'Welcome to My Website';
+  showValues = true;
+  changeValues() {
+    console.log(this.showValues);
+    this.showValues = !this.showValues;
+  }
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    this.breakpointObserver.observe(['(max-width: 800px']).subscribe((res) => {
+      if (res.matches) {
+        this.drawer.mode = 'over';
+        this.drawer.close();
+      } else {
+        this.drawer.mode = 'side';
+        this.drawer.close();
+      }
+    });
+  }
 }
