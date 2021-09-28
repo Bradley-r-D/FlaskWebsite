@@ -13,10 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonalInfoComponent, NavpageComponent],
+  declarations: [AppComponent, PersonalInfoComponent, NavpageComponent, HomePageComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -28,9 +31,12 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTabsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [HomePageComponent],
 })
 export class AppModule {}
