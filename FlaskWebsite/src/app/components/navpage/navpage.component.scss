@@ -1,23 +1,29 @@
 .sidenav-container {
   height: 100%;
+  background: url(\src\res\Website_Background.png);
 }
 
 .sidenav {
   width: 200px;
+  background: url(\src\res\Website_Background.png);
 }
 
-.sidenav .mat-toolbar {
+.sidenav.mat-toolbar {
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: #16505b;
+  color: white;
 }
 
 .mat-subBar {
   position: sticky;
+  background-color: #16505b;
+  color: white;
 }
 
 .navBar-text {
@@ -31,4 +37,6 @@
 footer {
   font-style: italic;
   text-align: center;
+  color: white;
+  text-anchor: end;
 }

@@ -2,11 +2,11 @@
 @include mat-core();
 
 $mat-primary-scheme: (
-  100: #aab4f0,
-  500: #011698,
-  700: #03074a,
+  100: #16505b,
+  500: #0e3f49,
+  700: #002229,
   contrast: (
-    100: rgba(0, 0, 0, 0.87),
+    100: rgba(170, 170, 170, 0.87),
     500: #ffffff,
     700: #ffffff,
   ),
@@ -16,7 +16,7 @@ $mat-accent-scheme: (
   500: #8e2a2a,
   700: #4d0101,
   contrast: (
-    100: rgba(0, 0, 0, 0.87),
+    100: rgba(155, 155, 155, 0.87),
     500: rgba(255, 255, 255, 0.87),
     700: #ffffff,
   ),
@@ -45,8 +45,10 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.textStyles {
+  color: white;
 }
