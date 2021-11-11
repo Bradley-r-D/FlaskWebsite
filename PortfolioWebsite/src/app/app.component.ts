@@ -11,5 +11,5 @@ export class AppComponent {
     // Load Color Scheme
     this.colorSchemeService.load();
   }
-  title = 'FlaskWebsite';
+  title = 'PortfolioWebsite';
 }
