@@ -17,9 +17,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonalInfoComponent, NavpageComponent, HomePageComponent],
+  declarations: [AppComponent, PersonalInfoComponent, NavpageComponent, HomePageComponent, SkillsComponent],
   imports: [
     BrowserModule,
     FormsModule,

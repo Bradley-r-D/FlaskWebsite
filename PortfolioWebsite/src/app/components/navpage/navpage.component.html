@@ -15,7 +15,14 @@
       >
         Personal Info
       </a>
-      <a mat-list-item href="#" style="color: white">Skills</a>
+      <a
+        mat-list-item
+        routerLink="/skills"
+        routerLinkActive="active"
+        style="color: white"
+      >
+        Skills
+      </a>
       <a mat-list-item href="#" style="color: white">Projects</a>
       <a mat-list-item href="#" style="color: white">Contact Me</a>
     </mat-nav-list>
@@ -44,7 +51,9 @@
           >
             Personal Info
           </a>
-          <a class="navbar-link" href="#">Skills</a>
+          <a class="navbar-link" routerLink="/skills" routerLinkActive="active">
+            Skills
+          </a>
           <a class="navbar-link" href="#">Projects</a>
           <a class="navbar-link" href="#">Contact Me</a>
         </mat-nav-list>
@@ -52,8 +61,5 @@
     </mat-toolbar>
     <router-outlet></router-outlet>
     <footer>Developed using Angular</footer>
-  </mat-sidenav-content>
-  <mat-sidenav-content>
-    <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>
