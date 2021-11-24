@@ -1,6 +1,7 @@
 <body>
   <h1 class="title">My Skills</h1>
   <div class="skills-container" id="skills">
+    <p>{{ skillShown }}</p>
     <table class="skills-Table">
       <thead class="skills-TableHeader">
         <tr>
@@ -9,7 +10,12 @@
         </tr>
       </thead>
       <tbody class="skill-TableBody">
-        <tr class="skills-tableRow" *ngFor="let skill of mySkills">
+        <tr
+          class="skills-tableRow skill-name"
+          *ngFor="let skill of mySkills"
+          (mouseover)="getContent(skill)"
+          (mouseout)="skillShown = ' No Skill Selected '"
+        >
           <td class="skills-tableData">{{ skill.skillName }}</td>
           <td class="skills-tableData">{{ skill.skillLevel }}</td>
         </tr>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { throwMatDuplicatedDrawerError } from '@angular/material/sidenav';
+import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'app-skills',
@@ -29,7 +31,14 @@ export class SkillsComponent implements OnInit {
     { skillName: 'Google DialogFlow ', skillLevel: 'Intermediate' },
     { skillName: 'Electrical Circuit Analysis', skillLevel: 'Intermediate' },
   ];
+  public skillShown: any;
+  private value: boolean = false;
+
   constructor() {}
+
+  getContent(skill: any) {
+    this.skillShown = skill.skillName;
+  }
 
   ngOnInit(): void {}
 }
