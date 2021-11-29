@@ -4,9 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavpageComponent } from './components/navpage/navpage.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,11 +14,22 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { SkillsComponent } from './components/skills/skills.component';
-
+import {
+  ContactMeComponent,
+  HomePageComponent,
+  NavpageComponent,
+  PersonalInfoComponent,
+  SkillsComponent,
+} from './components';
 @NgModule({
-  declarations: [AppComponent, PersonalInfoComponent, NavpageComponent, HomePageComponent, SkillsComponent],
+  declarations: [
+    AppComponent,
+    PersonalInfoComponent,
+    NavpageComponent,
+    HomePageComponent,
+    SkillsComponent,
+    ContactMeComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
