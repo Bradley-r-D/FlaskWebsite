@@ -1,1 +1,64 @@
-
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>CONTACT</span>
+            <span>ME</span>
+          </div>
+          <div class="app-contact">CONTACT INFO : +1-(868)-392-8178</div>
+        </div>
+        <div class="screen-body-item">
+          <form class="app-form" (submit)="logData()">
+            <div class="app-form-group">
+              <input
+                class="app-form-control"
+                id="name"
+                type="text"
+                placeholder="NAME"
+                [(ngModel)]="visitor.name"
+                name="name"
+                #name="ngModel"
+              />
+            </div>
+            <div class="app-form-group">
+              <input
+                class="app-form-control"
+                id="email"
+                type="email"
+                placeholder="EMAIL"
+                [(ngModel)]="visitor.email"
+                name="email"
+              />
+            </div>
+            <div class="app-form-group">
+              <input
+                class="app-form-control"
+                id="phone"
+                type="number"
+                placeholder="CONTACT NO."
+                [(ngModel)]="visitor.phone"
+                name="phone"
+              />
+            </div>
+            <div class="app-form-group message">
+              <input
+                class="app-form-control"
+                id="message"
+                type="text"
+                placeholder="MESSAGE"
+                [(ngModel)]="visitor.comments"
+                name="message"
+              />
+            </div>
+            <div class="app-form-group buttons">
+              <button class="app-form-button" type="reset">CANCEL</button>
+              <button class="app-form-button" type="submit">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

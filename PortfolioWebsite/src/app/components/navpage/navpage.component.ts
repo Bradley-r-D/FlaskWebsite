@@ -36,14 +36,5 @@ export class NavpageComponent {
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-    this.breakpointObserver.observe(['(max-width: 800px']).subscribe((res) => {
-      if (res.matches) {
-        this.drawer.mode = 'over';
-        this.drawer.close();
-      } else {
-        this.drawer.mode = 'side';
-        this.drawer.close();
-      }
-    });
   }
 }

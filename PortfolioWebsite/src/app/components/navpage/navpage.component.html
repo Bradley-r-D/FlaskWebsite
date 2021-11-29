@@ -12,6 +12,7 @@
         routerLink="/personal-info"
         routerLinkActive="active"
         style="color: white"
+        (click)="drawer.toggle()"
       >
         Personal Info
       </a>
@@ -20,43 +21,37 @@
         routerLink="/skills"
         routerLinkActive="active"
         style="color: white"
+        (click)="drawer.toggle()"
       >
         Skills
       </a>
-      <a mat-list-item href="#" style="color: white">Projects</a>
-      <a mat-list-item href="#" style="color: white">Contact Me</a>
+      <a
+        mat-list-item
+        routerLink="/projects"
+        routerLinkActive="active"
+        style="color: white"
+        (click)="drawer.toggle()"
+      >
+        Projects
+      </a>
+      <a
+        mat-list-item
+        routerLink="/contactMe"
+        routerLinkActive="active"
+        style="color: white"
+        (click)="drawer.toggle()"
+      >
+        Contact Me
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="main-navBar" color="primary">
-      <button
-        class="menu-button"
-        mat-icon-button
-        *ngIf="drawer.mode === 'over'"
-        (click)="drawer.toggle()"
-      >
+      <button class="menu-button" mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>
         {{ page_name }}
-      </span>
-    </mat-toolbar>
-    <mat-toolbar class="mat-subBar" *ngIf="drawer.mode === 'side'">
-      <span>
-        <mat-nav-list class="navBar-text">
-          <a
-            class="navbar-link"
-            routerLink="/personal-info"
-            routerLinkActive="active"
-          >
-            Personal Info
-          </a>
-          <a class="navbar-link" routerLink="/skills" routerLinkActive="active">
-            Skills
-          </a>
-          <a class="navbar-link" href="#">Projects</a>
-          <a class="navbar-link" href="#">Contact Me</a>
-        </mat-nav-list>
       </span>
     </mat-toolbar>
     <router-outlet></router-outlet>

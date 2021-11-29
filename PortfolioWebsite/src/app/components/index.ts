@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { NavpageComponent } from './navpage/navpage.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -10,4 +11,5 @@ export {
   PersonalInfoComponent,
   SkillsComponent,
   ContactMeComponent,
+  TestComponent,
 };
