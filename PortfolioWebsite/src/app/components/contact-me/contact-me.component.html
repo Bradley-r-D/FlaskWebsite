@@ -10,7 +10,7 @@
           <div class="app-contact">CONTACT INFO : +1-(868)-392-8178</div>
         </div>
         <div class="screen-body-item">
-          <form class="app-form" (submit)="logData()">
+          <form class="app-form" (ngSubmit)="onSubmit($event)">
             <div class="app-form-group">
               <input
                 class="app-form-control"
