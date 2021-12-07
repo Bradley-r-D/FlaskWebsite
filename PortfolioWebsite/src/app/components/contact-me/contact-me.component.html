@@ -7,7 +7,6 @@
             <span>CONTACT</span>
             <span>ME</span>
           </div>
-          <div class="app-contact">CONTACT INFO : +1-(868)-392-8178</div>
         </div>
         <div class="screen-body-item">
           <form class="app-form" (ngSubmit)="onSubmit($event)">
@@ -36,7 +35,8 @@
               <input
                 class="app-form-control"
                 id="phone"
-                type="number"
+                type="tel"
+                pattern="[1]{1}-[868]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="CONTACT NO."
                 [(ngModel)]="visitor.phone"
                 name="phone"
@@ -56,6 +56,7 @@
               <button class="app-form-button" type="reset">CANCEL</button>
               <button class="app-form-button" type="submit">SEND</button>
             </div>
+            <div class="app-contact">CONTACT INFO : +1-(868)-392-8178</div>
           </form>
         </div>
       </div>
