@@ -5,7 +5,18 @@
     fixedInViewport="false"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
   >
-    <mat-toolbar color="primary"> More </mat-toolbar>
+    <mat-toolbar
+      class="clickable"
+      color="primary"
+      routerLink="/home"
+      routerLinkActive="active"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon aria-hidden="false" aria-label="Example home icon">
+        home
+      </mat-icon>
+      Home
+    </mat-toolbar>
     <mat-nav-list class="navList" color="primary">
       <a
         mat-list-item
