@@ -10,13 +10,8 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< Updated upstream
     "@angular/animations": "~15.2.9",
     "@angular/cdk": "^14.2.7",
-=======
-    "@angular/animations": "~14.3.0",
-    "@angular/cdk": "^15.2.9",
->>>>>>> Stashed changes
     "@angular/cli": "^16.0.1",
     "@angular/common": "~15.2.9",
     "@angular/compiler": "~15.2.9",
@@ -26,35 +21,6 @@
     "@angular/platform-browser": "~15.2.9",
     "@angular/platform-browser-dynamic": "~15.2.9",
     "@angular/router": "~15.2.9",
-=======
-    "@angular/animations": "~14.3.0",
-    "@angular/cdk": "^15.2.9",
-    "@angular/cli": "^16.0.1",
-    "@angular/common": "~14.3.0",
-    "@angular/compiler": "~14.3.0",
-    "@angular/core": "~14.3.0",
-    "@angular/forms": "~14.3.0",
-    "@angular/material": "^15.2.9",
-    "@angular/platform-browser": "~14.3.0",
-    "@angular/platform-browser-dynamic": "~14.3.0",
-    "@angular/router": "~14.3.0",
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-=======
-    "@angular/animations": "~14.3.0",
-    "@angular/cdk": "^15.2.9",
-    "@angular/cli": "^16.0.1",
-    "@angular/common": "~14.3.0",
-    "@angular/compiler": "~14.3.0",
-    "@angular/core": "~14.3.0",
-    "@angular/forms": "~14.3.0",
-    "@angular/material": "^15.2.9",
-    "@angular/platform-browser": "~14.3.0",
-    "@angular/platform-browser-dynamic": "~14.3.0",
-    "@angular/router": "~14.3.0",
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     "emailjs-com": "^3.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
