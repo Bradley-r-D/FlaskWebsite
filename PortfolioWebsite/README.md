@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Github Pages Build
 
-Run `ng build --configuration production --output-path ../docs --base-href "https://bradley-r-d.github.io/PortfolioWebsite/"`
+Run `ng build --configuration production --output-path /docs --base-href "https://bradley-r-d.github.io/PortfolioWebsite/"`
