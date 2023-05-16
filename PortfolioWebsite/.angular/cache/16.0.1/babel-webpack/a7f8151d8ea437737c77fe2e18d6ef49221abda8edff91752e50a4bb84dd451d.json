@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Visitor {\n  constructor() {\n    this.name = '';\n    this.email = '';\n    this.phone = '';\n    this.comments = '';\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

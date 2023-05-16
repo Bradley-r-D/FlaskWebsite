@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  email_UserID: 'user_BaKDHbFTXElOcr8IVnjap',\n  email_ServiceID: 'service_6s5kldp',\n  email_TemplateID: 'template_fveyxcm',\n  production: true\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
