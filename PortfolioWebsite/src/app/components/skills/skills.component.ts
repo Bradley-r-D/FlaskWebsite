@@ -32,7 +32,7 @@ export class SkillsComponent implements OnInit {
     { skillName: 'Electrical Circuit Analysis', skillLevel: 'Intermediate' },
   ];
   public skillShown: any;
-  private value: boolean = false;
+  private value = false;
 
   constructor() {}
 

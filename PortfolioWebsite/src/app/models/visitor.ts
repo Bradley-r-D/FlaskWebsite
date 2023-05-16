@@ -1,6 +1,6 @@
 export class Visitor {
-  name: String = '';
-  email: String = '';
-  phone: String = '';
-  comments: String = '';
+  name = '';
+  email = '';
+  phone = '';
+  comments = '';
 }
