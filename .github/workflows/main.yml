@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,11 +15,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 8.15.1
-      - name: Build and Deploy
+
+      - name: Build
+        run: |
+          npm install 
+          npm run build -- --prod
+
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: docs
-          BUILD_SCRIPT: npm install && npm run build -- --prod
+        with:
+          folder: docs
+          branch: gh-pages
+          access_token: ${{ secrets.ACCESS_TOKEN }}
