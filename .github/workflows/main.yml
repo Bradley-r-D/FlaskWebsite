@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build-and-deploy:
+  ghp-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,9 +20,9 @@ jobs:
           npm install 
           npm run build:ghp
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          folder: docs
-          branch: gh-pages
-          token: ${{ secrets.ACCESS_TOKEN }}
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@releases/v4
+      #   with:
+      #     folder: docs
+      #     branch: gh-pages
+      #     token: ${{ secrets.ACCESS_TOKEN }}

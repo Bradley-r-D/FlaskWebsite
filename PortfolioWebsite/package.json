@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ghp":"ng build --configuration production --base-href /ghpages/",
+    "build:ghp": "ng build --configuration production --output-path '../docs' --base-href 'https://bradley-r-d.github.io/PortfolioWebsite/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
