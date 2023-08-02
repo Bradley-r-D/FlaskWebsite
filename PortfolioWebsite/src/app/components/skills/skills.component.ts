@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { throwMatDuplicatedDrawerError } from '@angular/material/sidenav';
-import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'app-skills',
