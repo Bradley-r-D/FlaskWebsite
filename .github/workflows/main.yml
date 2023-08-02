@@ -16,7 +16,7 @@ jobs:
       - name: Build
         run: |
           node --version  
-          npm ci 
+          npm install 
           npm run build -- --prod
 
       - name: Deploy
