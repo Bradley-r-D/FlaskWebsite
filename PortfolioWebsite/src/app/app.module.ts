@@ -22,6 +22,7 @@ import {
   PersonalInfoComponent,
   SkillsComponent,
 } from './components';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,9 @@ import {
     SkillsComponent,
     ContactMeComponent,
   ],
+  providers: [],
+  bootstrap: [AppComponent],
+  exports: [HomePageComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -46,9 +50,7 @@ import {
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatProgressBarModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
-  exports: [HomePageComponent],
 })
 export class AppModule {}

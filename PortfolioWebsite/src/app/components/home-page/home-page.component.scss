@@ -6,6 +6,12 @@
 }
 .construction {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.constructionBar {
+  overflow: hidden;
+  width: 50%;
+  height: 50px !important;
 }
