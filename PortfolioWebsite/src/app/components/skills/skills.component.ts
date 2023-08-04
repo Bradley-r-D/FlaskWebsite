@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillList } from 'src/app/models/skillsClass';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent implements OnInit {
-  public mySkills: any[] = [
+export class SkillsComponent {
+  public mySkills: SkillList[] = [
     { skillName: 'Angular', skillLevel: 'Intermediate' },
     { skillName: 'ReactNative', skillLevel: 'Intermediate' },
     { skillName: 'JavaScript', skillLevel: 'Intermediate' },
@@ -29,14 +30,16 @@ export class SkillsComponent implements OnInit {
     { skillName: 'Google DialogFlow ', skillLevel: 'Intermediate' },
     { skillName: 'Electrical Circuit Analysis', skillLevel: 'Intermediate' },
   ];
-  public skillShown: any;
+  public skillShown = '';
   private value = false;
 
-  constructor() {}
-
-  getContent(skill: any) {
+  getContent(skill: SkillList) {
     this.skillShown = skill.skillName;
   }
-
-  ngOnInit(): void {}
+  onBlur(): void {
+    console.log('Not focused');
+  }
+  onFocus(): void {
+    console.log('In focus');
+  }
 }
